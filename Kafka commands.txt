@@ -1,0 +1,19 @@
+Zookeeper->starting zookepper first
+C:\kafka_2.13-3.9.0>bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+
+Kafka-server
+C:\kafka_2.13-3.9.0>bin\windows\kafka-server-start.bat config\server.properties
+
+Create Topic
+bin\windows\kafka-topics.bat --create --topic my-topic --bootstrap-server localhost:9092
+bin\windows\kafka-topics.bat --create --topic transaction-update-topic --bootstrap-server localhost:9092
+
+
+Producer from cmd
+C:\kafka_2.13-3.9.0>bin\windows\kafka-console-producer.bat --topic my-topic --bootstrap-server localhost:9092
+
+Consumer from cmd
+C:\kafka_2.13-3.9.0>bin\windows\kafka-console-consumer.bat --topic my-topic --from-beginning --bootstrap-server localhost:9092
+
+Consumer->
+C:\kafka_2.13-3.9.0>bin\windows\kafka-console-consumer.bat --topic location-update-topic --from-beginning --bootstrap-server localhost:9092

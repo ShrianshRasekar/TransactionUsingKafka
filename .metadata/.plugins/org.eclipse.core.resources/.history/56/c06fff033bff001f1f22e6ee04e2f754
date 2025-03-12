@@ -1,0 +1,18 @@
+package com.rewads.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.kafka.annotation.KafkaListener;
+
+@Configuration
+public class KafkaConfig {
+
+
+    @KafkaListener(topics = RewardsConstants.TRANSACTION_UPDATE_TOPIC, groupId = RewardsConstants.GROUP_ID)
+    public void updatedTransaction(Integer value) {
+
+        //System.out.println("");
+        System.out.println("Rewards Service consumed Transaction "+value);
+
+    }
+    
+}

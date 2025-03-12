@@ -1,0 +1,5 @@
+package com.transaction.config;
+
+public class TransactionConstants {
+
+}

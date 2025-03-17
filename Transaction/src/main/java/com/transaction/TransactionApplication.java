@@ -9,6 +9,8 @@ public class TransactionApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TransactionApplication.class, args);
 		System.out.println("Transaction Service Running");
+		
+		
 	}
 
 }

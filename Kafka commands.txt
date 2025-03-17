@@ -7,6 +7,8 @@ C:\kafka_2.13-3.9.0>bin\windows\kafka-server-start.bat config\server.properties
 Create Topic
 bin\windows\kafka-topics.bat --create --topic my-topic --bootstrap-server localhost:9092
 bin\windows\kafka-topics.bat --create --topic transaction-update-topic --bootstrap-server localhost:9092
+bin\windows\kafka-topics.bat --create --topic transaction-add-topic --bootstrap-server localhost:9092
+
 
 
 Producer from cmd
@@ -14,6 +16,7 @@ C:\kafka_2.13-3.9.0>bin\windows\kafka-console-producer.bat --topic my-topic --bo
 
 Consumer from cmd
 C:\kafka_2.13-3.9.0>bin\windows\kafka-console-consumer.bat --topic my-topic --from-beginning --bootstrap-server localhost:9092
+C:\kafka_2.13-3.9.0>bin\windows\kafka-console-consumer.bat --topic transaction-add-topic --from-beginning --bootstrap-server localhost:9092
 
 Consumer->
 C:\kafka_2.13-3.9.0>bin\windows\kafka-console-consumer.bat --topic location-update-topic --from-beginning --bootstrap-server localhost:9092

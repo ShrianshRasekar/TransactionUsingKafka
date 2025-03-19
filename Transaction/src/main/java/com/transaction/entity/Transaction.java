@@ -38,7 +38,8 @@ public class Transaction {
         this.transactionDate = transactionDate;
     }
 
-    // Auto-set transactionDate if not provided
+
+	// Auto-set transactionDate if not provided
     @PrePersist
     protected void onCreate() {
         if (transactionDate == null) {

@@ -1,8 +1,14 @@
 Zookeeper->starting zookepper first
 C:\kafka_2.13-3.9.0>bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+or go till windows folder and in powershell run command-> .\zookeeper-server-start.bat ..\..\config\zookeeper.properties
 
 Kafka-server
 C:\kafka_2.13-3.9.0>bin\windows\kafka-server-start.bat config\server.properties
+if kafka server closes in powershell automatically kill process using
+netstat -aon | findstr :9092
+then kill that PID
+taskkill /PID <PID> /F
+
 
 Create Topic
 bin\windows\kafka-topics.bat --create --topic my-topic --bootstrap-server localhost:9092

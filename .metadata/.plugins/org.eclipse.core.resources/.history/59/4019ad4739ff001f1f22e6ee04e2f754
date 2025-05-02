@@ -1,5 +1,0 @@
-package com.rewads.config;
-
-public class KafkaConfig {
-
-}
